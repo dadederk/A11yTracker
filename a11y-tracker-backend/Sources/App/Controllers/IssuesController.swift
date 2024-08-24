@@ -12,7 +12,7 @@ struct IssuesController: RouteCollection {
     func boot(routes: any Vapor.RoutesBuilder) throws {
         let issues = routes.grouped("issues")
         
-        issues.get(use: index)
+        issues.get(use: self.index)
         issues.get(":appId", use: index)
     }
     

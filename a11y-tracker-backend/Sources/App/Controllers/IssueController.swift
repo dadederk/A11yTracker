@@ -10,8 +10,8 @@ import Vapor
 
 struct IssueController: RouteCollection {
     func boot(routes: any Vapor.RoutesBuilder) throws {
-        let issue = routes.grouped("issue")
-        issue.post(use: create)
+        let issue = routes.grouped(AuthMiddleware()).grouped("issue")
+        issue.post(use: self.create)
     }
     
     @Sendable
