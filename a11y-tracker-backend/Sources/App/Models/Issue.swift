@@ -6,8 +6,22 @@
 //
 
 import Foundation
+import Fluent
 import Vapor
 
-struct Issue: Content {
-    let title: String
+final class Issue: Model, Content {
+    static let schema: String = "issues"
+    
+    @ID(key: .id)
+    var id: UUID?
+    
+    @Field(key: "title")
+    var title: String
+    
+    init() {}
+    
+    init(id: UUID? = nil, title: String) {
+        self.id = id
+        self.title = title
+    }
 }

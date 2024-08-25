@@ -43,9 +43,6 @@ struct IssuesController: RouteCollection {
             }
         }
         
-        return [
-            Issue(title: "The first created issue\(forAppId)"),
-            Issue(title: "The second created issue\(forAppId)"),
-        ]
+        return try await Issue.query(on: req.db).all()
     }
 }
