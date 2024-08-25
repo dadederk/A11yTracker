@@ -11,9 +11,20 @@ import Vapor
 struct IssueController: RouteCollection {
     func boot(routes: any Vapor.RoutesBuilder) throws {
         let issue = routes.grouped("issue")
-        issue.grouped(AuthMiddleware()).post(use: create)
-        issue.grouped(AuthMiddleware()).delete(":id", use: delete)
+        
         issue.get(":id", use: index)
+        issue.grouped(AuthMiddleware()).post(use: create)
+        issue.grouped(AuthMiddleware()).put(use: update)
+        issue.grouped(AuthMiddleware()).delete(":id", use: delete)
+    }
+    
+    @Sendable
+    func index(req: Request) async throws -> Issue {
+        guard let issue = try await Issue.find(req.parameters.get("id"), on: req.db) else {
+            throw Abort(.notFound)
+        }
+        
+        return issue
     }
     
     @Sendable
@@ -22,12 +33,18 @@ struct IssueController: RouteCollection {
         try await issue.save(on: req.db)
         return issue
     }
-
+    
     @Sendable
-    func index(req: Request) async throws -> Issue {
-        guard let issue = try await Issue.find(req.parameters.get("id"), on: req.db) else {
+    func update(req: Request) async throws -> Issue {
+        let updatedIssue = try req.content.decode(Issue.self)
+        
+        guard let issue = try await Issue.find(updatedIssue.id, on: req.db) else {
             throw Abort(.notFound)
         }
+        
+        issue.title = updatedIssue.title
+        
+        try await issue.update(on: req.db)
         
         return issue
     }
