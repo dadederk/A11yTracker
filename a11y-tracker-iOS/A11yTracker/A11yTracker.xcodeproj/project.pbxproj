@@ -15,6 +15,9 @@
 		0B0184BC2C76964800EACB5D /* A11yTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0184BB2C76964800EACB5D /* A11yTrackerTests.swift */; };
 		0B0184C62C76964800EACB5D /* A11yTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0184C52C76964800EACB5D /* A11yTrackerUITests.swift */; };
 		0B0184C82C76964800EACB5D /* A11yTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0184C72C76964800EACB5D /* A11yTrackerUITestsLaunchTests.swift */; };
+		2124DF722C7B95DB00B99548 /* IssuesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2124DF712C7B95DB00B99548 /* IssuesView.swift */; };
+		2124DF742C7B972600B99548 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2124DF732C7B972600B99548 /* SearchView.swift */; };
+		2124DF762C7B97DC00B99548 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2124DF752C7B97DC00B99548 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		0B0184C12C76964800EACB5D /* A11yTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = A11yTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B0184C52C76964800EACB5D /* A11yTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A11yTrackerUITests.swift; sourceTree = "<group>"; };
 		0B0184C72C76964800EACB5D /* A11yTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A11yTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2124DF712C7B95DB00B99548 /* IssuesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesView.swift; sourceTree = "<group>"; };
+		2124DF732C7B972600B99548 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		2124DF752C7B97DC00B99548 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 			children = (
 				0B0184A72C76964100EACB5D /* A11yTrackerApp.swift */,
 				0B0184A92C76964100EACB5D /* ContentView.swift */,
+				2124DF712C7B95DB00B99548 /* IssuesView.swift */,
+				2124DF732C7B972600B99548 /* SearchView.swift */,
+				2124DF752C7B97DC00B99548 /* ProfileView.swift */,
 				0B0184AB2C76964100EACB5D /* Item.swift */,
 				0B0184AD2C76964700EACB5D /* Assets.xcassets */,
 				0B0184AF2C76964700EACB5D /* A11yTracker.entitlements */,
@@ -262,9 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2124DF742C7B972600B99548 /* SearchView.swift in Sources */,
 				0B0184AA2C76964100EACB5D /* ContentView.swift in Sources */,
 				0B0184AC2C76964100EACB5D /* Item.swift in Sources */,
 				0B0184A82C76964100EACB5D /* A11yTrackerApp.swift in Sources */,
+				2124DF762C7B97DC00B99548 /* ProfileView.swift in Sources */,
+				2124DF722C7B95DB00B99548 /* IssuesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +436,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"A11yTracker/Preview Content\"";
-				DEVELOPMENT_TEAM = K977UXC69X;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -462,7 +474,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"A11yTracker/Preview Content\"";
-				DEVELOPMENT_TEAM = K977UXC69X;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
