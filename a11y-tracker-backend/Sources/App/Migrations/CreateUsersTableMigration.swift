@@ -12,7 +12,6 @@ struct CreateUsersTableMigration: AsyncMigration {
         try await database.schema("users")
             .id()
             .field("username", .string, .required).unique(on: "username")
-        //TODO: Do this safely
             .field("password", .string, .required)
             .create()
     }

@@ -22,7 +22,7 @@ struct ContentView: View {
         TabView(selection: $selectedTab) {
             IssuesView()
                 .tabItem {
-                    Label("Issues", systemImage: "ant")
+                    Label("Issues", systemImage: "ant.circle")
                 }
             SearchView()
                 .tabItem {

@@ -9,7 +9,7 @@ import Foundation
 import Fluent
 import Vapor
 
-final class Issue: Model, Content {
+final class Issue: Model, Content, @unchecked Sendable {
     static let schema: String = "issues"
     
     @ID(key: .id)
