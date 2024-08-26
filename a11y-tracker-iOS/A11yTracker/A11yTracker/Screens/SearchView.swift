@@ -19,5 +19,4 @@ struct SearchView: View {
 
 #Preview {
     SearchView()
-        .modelContainer(for: Item.self, inMemory: true)
 }

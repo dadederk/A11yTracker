@@ -10,9 +10,11 @@ import SwiftData
 
 @main
 struct A11yTrackerApp: App {
+    @StateObject private var dataStore = A11yTrackerDataStore()
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Issue.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -26,6 +28,7 @@ struct A11yTrackerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(dataStore)
         }
         .modelContainer(sharedModelContainer)
     }

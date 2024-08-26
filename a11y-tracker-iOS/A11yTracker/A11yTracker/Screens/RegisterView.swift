@@ -19,5 +19,5 @@ struct RegisterView: View {
 
 #Preview {
     RegisterView()
-        .modelContainer(for: Item.self, inMemory: true)
+        .environmentObject(A11yTrackerDataStore())
 }
