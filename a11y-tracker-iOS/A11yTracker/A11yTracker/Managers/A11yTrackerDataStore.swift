@@ -22,13 +22,13 @@ class A11yTrackerDataStore: ObservableObject {
         return !registerResponseDTO.error
     }
     
-    func login(username: String, password: String) async throws -> String? {
+    func login(username: String, password: String) async throws -> LoginResponseDTO {
         guard let url = Constants.Endpoint.login else {
-            fatalError("Invalid login url")
+            throw NetworkError.badRequest
         }
         let loginData = ["username": username, "password": password]
         let resource = try Resource(url: url, method: .post(JSONEncoder().encode(loginData)), type: LoginResponseDTO.self)
         let loginResponseDTO = try await httpClient.load(resource)
-        return loginResponseDTO.token
+        return loginResponseDTO
     }
 }

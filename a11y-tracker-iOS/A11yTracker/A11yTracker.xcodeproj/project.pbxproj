@@ -26,6 +26,7 @@
 		2124DF872C7CC60300B99548 /* RegisterResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2124DF862C7CC60300B99548 /* RegisterResponseDTO.swift */; };
 		2124DF8A2C7CC67100B99548 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2124DF892C7CC67100B99548 /* Constants.swift */; };
 		2124DF8C2C7CC97500B99548 /* LoginResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2124DF8B2C7CC97500B99548 /* LoginResponseDTO.swift */; };
+		2124DF8E2C7CDE7700B99548 /* UserUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2124DF8D2C7CDE7700B99548 /* UserUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		2124DF862C7CC60300B99548 /* RegisterResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterResponseDTO.swift; sourceTree = "<group>"; };
 		2124DF892C7CC67100B99548 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2124DF8B2C7CC97500B99548 /* LoginResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponseDTO.swift; sourceTree = "<group>"; };
+		2124DF8D2C7CDE7700B99548 /* UserUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				2124DF892C7CC67100B99548 /* Constants.swift */,
+				2124DF8D2C7CDE7700B99548 /* UserUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2124DF8E2C7CDE7700B99548 /* UserUtils.swift in Sources */,
 				2124DF832C7CC3DE00B99548 /* ComposerView.swift in Sources */,
 				2124DF852C7CC4DC00B99548 /* A11yTrackerDataStore.swift in Sources */,
 				2124DF742C7B972600B99548 /* SearchView.swift in Sources */,
@@ -500,7 +504,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"A11yTracker/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L8P3SDVYVX;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -519,7 +523,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.accessibilityUpTo11.A11yTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dadederk.A11yTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -538,7 +542,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"A11yTracker/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = L8P3SDVYVX;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -557,7 +561,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.accessibilityUpTo11.A11yTracker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dadederk.A11yTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";

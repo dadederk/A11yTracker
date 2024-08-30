@@ -10,6 +10,7 @@ import SwiftData
 import SwiftUI
 
 struct IssuesView: View {
+    @Environment(\.accessibilityShowButtonShapes) private var buttonShapesEnabled
     @Environment(\.modelContext) private var modelContext
     @Query private var issues: [Issue]
     @State private var showIssueComposer: Bool = false
@@ -42,7 +43,8 @@ struct IssuesView: View {
                         Button(action: {
                             showIssueComposer.toggle()
                         }, label: {
-                            Label("Compose Issue", systemImage: "square.and.pencil.circle")
+                            Label("Compose Issue", systemImage: "square.and.pencil")
+                                .symbolVariant(buttonShapesEnabled ? .circle : .none)
                         })
                         .sheet(isPresented: $showIssueComposer, content: {
                             ComposerView()
